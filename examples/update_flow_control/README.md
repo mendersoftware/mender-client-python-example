@@ -29,7 +29,7 @@ See [main README](../../README.md) for instructions on how to install this
 package. Once installed, start this example with:
 
 ```
-mender-update-flow-control
+sudo mender-update-flow-control
 ```
 
 Which initializes the application, sets all the states in the Update Control Map
