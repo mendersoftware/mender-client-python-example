@@ -1,6 +1,24 @@
+stages:
+  - test
 
 include:
   - project: 'Northern.tech/Mender/mendertesting'
     file: '.gitlab-ci-check-commits.yml'
   - project: 'Northern.tech/Mender/mendertesting'
     file: '.gitlab-ci-check-license.yml'
+  - project: 'Northern.tech/Mender/mendertesting'
+    file: '.gitlab-ci-check-python3-format.yml'
+
+test:static:
+  extends: .test
+  stage: test
+  image: python:3.6-buster
+  before_script:
+    - pip install isort
+    - pip install mypy
+    - pip install pylint
+    - pip install .
+  script:
+    - isort --check-only --line-length 88 --wrap-length 88 examples
+    - mypy examples
+    - pylint examples
