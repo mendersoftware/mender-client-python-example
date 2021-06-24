@@ -8,6 +8,8 @@ include:
     file: '.gitlab-ci-check-license.yml'
   - project: 'Northern.tech/Mender/mendertesting'
     file: '.gitlab-ci-check-python3-format.yml'
+  - project: 'Northern.tech/Mender/mendertesting'
+    file: '.gitlab-ci-github-status-updates.yml'
 
 test:static:
   stage: test
