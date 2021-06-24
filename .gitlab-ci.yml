@@ -13,6 +13,7 @@ test:static:
   stage: test
   image: python:3.6-buster
   before_script:
+    - apt-get update && apt-get install -y libgirepository1.0-dev
     - pip install isort
     - pip install mypy
     - pip install pylint
