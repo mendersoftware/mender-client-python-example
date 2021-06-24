@@ -8,11 +8,14 @@ include:
     file: '.gitlab-ci-check-license.yml'
   - project: 'Northern.tech/Mender/mendertesting'
     file: '.gitlab-ci-check-python3-format.yml'
+  - project: 'Northern.tech/Mender/mendertesting'
+    file: '.gitlab-ci-github-status-updates.yml'
 
 test:static:
   stage: test
-  image: python:3.6-buster
+  image: python:3.7-buster
   before_script:
+    - apt-get update && apt-get install -y libgirepository1.0-dev
     - pip install isort
     - pip install mypy
     - pip install pylint

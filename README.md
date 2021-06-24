@@ -71,6 +71,27 @@ You can now launch the different examples, for instance:
 sudo mender-update-flow-control
 ```
 
+## Troubleshooting
+
+### Error installing PyGObject (gobject-introspection)
+
+The following errors indicates that the gobject-introspection-1.0 package,
+required by the PyGObject Python package, is not available in the system:
+
+```
+Package gobject-introspection-1.0 was not found in the pkg-config search path.
+Perhaps you should add the directory containing `gobject-introspection-1.0.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'gobject-introspection-1.0' found
+Command '('pkg-config', '--print-errors', '--exists', 'gobject-introspection-1.0 >= 1.56.0')' returned non-zero exit status 1.
+```
+
+On a Debian/Ubuntu system, you can install the package `libgirepository1.0-dev`:
+
+```
+sudo apt-get install -y libgirepository1.0-dev
+```
+
 ## Contributing
 
 We welcome and ask for your contribution. If you would like to contribute to
