@@ -10,7 +10,6 @@ include:
     file: '.gitlab-ci-check-python3-format.yml'
 
 test:static:
-  extends: .test
   stage: test
   image: python:3.6-buster
   before_script:

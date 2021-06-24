@@ -34,7 +34,7 @@ setuptools.setup(
     ],
     keywords=["mender", "OTA", "updater", "dbus"],
     packages=["mender_examples.update_flow_control"],
-    install_requires=["pydbus"],
+    install_requires=["pydbus", "PyGObject"],
     entry_points={"console_scripts": ["mender-update-flow-control=mender_examples.update_flow_control.update_flow_control:main"]},
     package_dir={"mender_examples": "examples"},
     python_requires=">=3.6",
