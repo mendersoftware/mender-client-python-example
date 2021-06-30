@@ -57,7 +57,7 @@ PyDBus documentation helpful.
 
 ### Requirements
 
-The examples require Python 3 and it's package manager `pip`. We also use `git`
+The examples require Python 3 and its package manager `pip`. We also use `git`
 to get the source.
 
 For Debian based distributions install the required dependencies with:
