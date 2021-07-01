@@ -18,10 +18,23 @@ the use of the code as-is in production applications.
 
 ## Documentation
 
-### API documentation
+### Customization of the update process
+
+Mender offers several ways to customize the update process. You can find a
+high-level overview of the different approaches in the
+[Customization of the update process](https://docs.mender.io/overview/customize-the-update-process)
+documentation.
+
+### Device-side API documentation
 
 The D-Bus APIs of the Mender client are documented in the [Device-side API
 section of the Mender Docs](https://docs.mender.io/device-side-api).
+
+### How to use the Mender Device-side API
+
+Please refer to the tutorial for
+[using the Device-side API](https://docs.mender.io/client-installation/use-the-device-side-api)
+for a step-by-step guide on how to use the example applications in this repository.
 
 ### D-Bus documentation
 
@@ -44,7 +57,7 @@ PyDBus documentation helpful.
 
 ### Requirements
 
-The examples require Python 3 and it's package manager `pip`. We also use `git`
+The examples require Python 3 and its package manager `pip`. We also use `git`
 to get the source.
 
 For Debian based distributions install the required dependencies with:
