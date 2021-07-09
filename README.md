@@ -63,6 +63,7 @@ to get the source.
 For Debian based distributions install the required dependencies with:
 
 ```
+sudo apt-get update
 sudo apt-get install -y git python3 python3-pip
 ```
 
